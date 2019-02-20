@@ -1,4 +1,4 @@
-//almacenamos en variables las pantallas de la pagina //
+//ALMACENAMOS EN VARIABLES LAS PANTALLAS DE LA WEB //
 const startButton = document.getElementById("start");
 const startPage=document.getElementById("welcome-page");
 const electionPage=document.getElementById("second-page");
@@ -11,7 +11,12 @@ const electionButtonPresenter=document.getElementById("opcion-presentador");
 const footer=document.getElementById("footer");
 const buttonComebackStartFromSecondPage=document.getElementById("comeback-inicio");
 
-// comienzo :) ocultamos las demás páginas para que solo aparezca inicio//
+/*const textToEncode=document.getElementById("texto-a-cifrar");
+const textToDecode=document.getElementById("texto-a-descifrar");*/
+
+
+
+// PAGINA DE COMIENZO:) ocultamos las demás páginas para que solo aparezca inicio//
 
 startButton.style.display="block";
 startPage.style.display="block"
@@ -20,7 +25,7 @@ encodeJuryPage.style.display="none";
 decodePresenterPage.style.display="none";
 footer.style.display="block";
 
-//añadimos al boton start el evento click ocultando las otras paginas para poder escoger mi rol: presentador y jurado//
+//SEGUNDA PAGINA :añadimos al boton start el evento click ocultando las otras paginas para poder escoger mi rol: presentador y jurado//
   startButton.addEventListener("click",()=>{
   startButton.style.display="none";
   startPage.style.display="none";
@@ -30,7 +35,7 @@ footer.style.display="block";
   footer.style.display="block";
 });
 
-//añadimos al boton soy jurado el evento click y mostramos opciones para cifrar al ganador//
+// PAGINA DE JURADO : añadimos al boton soy jurado el evento click y mostramos opciones para cifrar al ganador//
 
 electionButtonJury.addEventListener("click",()=>{
   startPage.style.display="none";
@@ -40,7 +45,7 @@ electionButtonJury.addEventListener("click",()=>{
   footer.style.display="block";
 })
 
-//añadimos al boton soy presentador el evento click y mostramos opciones para descifrar al ganador//
+// PAGINA DE PRESENTADOR :añadimos al boton soy presentador el evento click y mostramos opciones para descifrar al ganador//
 electionButtonPresenter.addEventListener("click",()=>{
   startButton.style.display="none";
   startPage.style.display="none";
@@ -50,8 +55,7 @@ electionButtonPresenter.addEventListener("click",()=>{
   footer.style.display="block";
 });
 
-// boton regresar desde jurado//
-
+// boton REGRESAR desde jurado//
 buttonBackFromJury.addEventListener("click",()=>{
   startButton.style.display="none";
   startPage.style.display="none";
@@ -60,8 +64,8 @@ buttonBackFromJury.addEventListener("click",()=>{
   decodePresenterPage.style.display="none";
   footer.style.display="block"
 });
-//boton regresar desde presentador //
 
+//boton REGRESAR desde presentador //
 buttonBackFromPresenter.addEventListener("click",()=>{
   startButton.style.display="none";
   startPage.style.display="none";
@@ -80,3 +84,17 @@ buttonComebackStartFromSecondPage.addEventListener("click",()=>{
   decodePresenterPage.style.display="none";
   footer.style.display="block";
 });
+
+// obteniendo el valor de textarea para que pase desde la caja TEXTO A CIFRAR a TEXTO CIFRADO//
+/*
+function showEncodeValue() {
+ const textToEncode=document.getElementById("texto-a-cifrado").value;
+ document.getElementById("texto-a-cifrar").value=texto;
+};
+
+
+//obteniendo el valor de textare para que pase desde la caja TEXTO A DESCIFRAR a TEXTO DESCRIFRADO//
+
+/*function showDecodeValue() {
+textToDecode.value;
+}*/
