@@ -1,15 +1,49 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
-    </div>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Academy Awards ©</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <!-- PAGINA DE BIENVENIDA-->
+      <div id="welcome-page">
+         <h1>Bienvenido a la 90th Edición de los Premios de la Academia</h1>
+         <p> Si te encuentras en esta web super secreta es porque eres Jurado de la Academia o presentador</p>
+         <button type="button" id="start"> Empezar</button>
+      </div>
+      <!-- PAGINA DE ELECCION : JURADO O USUARIO-->
+      <div id="second-page"
+      <div>
+         <button type="button" id="opcion-jurado">Soy jurado </button>
+         <button type="button" id="opcion-presentador">Soy presentador</button>
+         <button type="button" id="comeback-inicio">Inicio</button>
+      </div>
+      </div>
+      <!-- JURADO-->
+      <div id="jury-page">
+         <textarea id="texto-a-cifrar" rows="10" cols="80">Ingresa el nombre del candidato ganador</textarea>
+         <input type="number" placeholder="ingresa offset para cifrar" id="offset-cifrado">
+         <button id="cifrar-jurado">Cifrar</button>
+         <textarea id="texto-cifrado" rows="8" cols="80">Aquí obtendrás el nombre del candidato cifrado </textarea>
+         <button type="button" id="return-from-jury"> Regresar </button>
+      </div>
+      <!-- PRESENTADOR-->
+      <div id="presenter-page">
+            <textarea id="texto-a-descrifrar" rows="8" cols="80">Ingresa el nombre cifrado del candidato ganador</textarea>
+            <input type="number" placeholder="ingresa offset para descifrar" id="offset-cifrado">
+            <button type="button" id="descifrar-presentador">Descrifrar</button>
+            <textarea id="texto-descifrado" rows="8" cols="80">Candidatx ganadxr Descifradx</textarea>
+            <button type="button" id="return-from-presenter">Regresar</button>
+         </div>
+      <!-- PIE DE PÁGINA -->
+      <footer>
+        <div id="footer">
+        © 2019 Ceaser Cipher Academy Awards
+        </div>
+      </footer>
+      <script src="index.js"></script>
     <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </body>
+   </body>
 </html>
