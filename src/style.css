@@ -2,6 +2,18 @@
 
 /* DANDO ESTILO A LOS BOTONES */
 
+@import "lesshat";
+
+.container{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  top :20px;
+}
+
 body{
 text-align: center;
 font-family: "Helvetica";
@@ -9,16 +21,17 @@ background-color: #F9F7E4;
 margin: auto;
 }
 
-#start{
+#start,#intro{
 margin-right: auto;
 margin-left: auto;
+text-align: center;
 }
 
 #footer{
 margin-top: none;
 }
 
-.start,.opcion-jurado,.opcion-presentador,.comeback-inicio,.cifrar-jurado,.return-from-jury,.return-from-presenter{
+.intro,.start,.opcion-jurado,.opcion-presentador,.comeback-inicio,.cifrar-jurado,.return-from-jury,.return-from-presenter{
 position: center;
 margin-left: auto;
 margin-right: auto;
@@ -42,3 +55,40 @@ margin: 10px 5px;
 -o-transition: all 0.2s ease-in-out;
 transition: all 0.2s ease-in-out;
 }
+
+.slider{
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider ul{
+  display: flex;
+  padding: 0;
+  width: 100%;
+  animation:cambio 20s infinite;
+}
+
+.slider li{
+  list-style: none;
+  width: 100%;
+}
+
+.slider img{
+  width: 100%;
+
+keyframes{
+  }
+@keyframes cambio{
+  0%{ margin-left: 0;}
+  20%{margin-left: 0;}
+
+  25%{ margin-left: -100%}
+  45%{ margin-left: -100%}
+
+  50%{ margin-left: -200%}
+  70%{ margin-left: -200%}
+
+  75%{ margin-left: -300%}
+  100%{ margin-left:-300%}
+  }
