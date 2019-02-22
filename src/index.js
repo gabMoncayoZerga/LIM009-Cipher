@@ -1,4 +1,4 @@
-//ALMACENAMOS EN VARIABLES LAS PANTALLAS DE LA WEB //
+//ALMACENAMOS EN VARIABLES LAS PANTALLAS ,TEXTAREA Y BOTONES DE LA WEB //
 const startButton = document.getElementById("start");
 const startPage=document.getElementById("welcome-page");
 const electionPage=document.getElementById("second-page");
@@ -10,10 +10,10 @@ const buttonBackFromPresenter=document.getElementById("return-from-presenter");
 const electionButtonPresenter=document.getElementById("opcion-presentador");
 const footer=document.getElementById("footer");
 const buttonComebackStartFromSecondPage=document.getElementById("comeback-inicio");
-
 /*const textToEncode=document.getElementById("texto-a-cifrar");
-const textToDecode=document.getElementById("texto-a-descifrar");*/
-
+const textEncoded=document.getElementById("texto-cifrado");
+const textToDecode=document.getElementById("texto-a-descifrar");
+const textDecoded=document.getElementById("texto-descifrado");*/
 
 
 // PAGINA DE COMIENZO:) ocultamos las demás páginas para que solo aparezca inicio//
@@ -86,15 +86,18 @@ buttonComebackStartFromSecondPage.addEventListener("click",()=>{
 });
 
 // obteniendo el valor de textarea para que pase desde la caja TEXTO A CIFRAR a TEXTO CIFRADO//
+
 /*
-function showEncodeValue() {
- const textToEncode=document.getElementById("texto-a-cifrado").value;
- document.getElementById("texto-a-cifrar").value=texto;
-};
+function showingEncodeValue(valueTextToEncode) =>{
+
+  const valueTextToEncode=textToEncode.value;
+  const
+});
+
 
 
 //obteniendo el valor de textare para que pase desde la caja TEXTO A DESCIFRAR a TEXTO DESCRIFRADO//
 
-/*function showDecodeValue() {
+/*function showingDecodeValue() {
 textToDecode.value;
 }*/
