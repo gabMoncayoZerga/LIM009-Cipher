@@ -2,7 +2,6 @@
 
 /* DANDO ESTILO A LOS BOTONES */
 
-@import "lesshat";
 
 @keyframes cambio {
   0%{ margin-left: 0;}
@@ -39,7 +38,7 @@
 
 body{
 text-align: center;
-font-family: "Helvetica";
+font-family: "Abril Fatface";
 background-color: #F9F7E4;
 margin: auto;
 }
@@ -99,3 +98,8 @@ transition: all 0.2s ease-in-out;
 
 .slider img{
   width: 100%;
+}
+
+.none {
+  display: none;
+}

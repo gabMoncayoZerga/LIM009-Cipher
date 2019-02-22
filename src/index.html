@@ -12,9 +12,9 @@
   <div class="header">
     <nav>
       <ul>
-        <ol> <a href="https://www.facebook.com/TheAcademy/"> Facebook</a></ol>
-        <ol> <a href="https://www.instagram.com/theacademy/"> Instagram</a></ol>
-        <ol> <a href="https://twitter.com/theacademy"> Twitter</a></ol>
+        <ol class="social-item"> <a href="https://www.facebook.com/TheAcademy/"> Facebook</a></ol>
+        <ol class="social-item"> <a href="https://www.instagram.com/theacademy/"> Instagram</a></ol>
+        <ol class="social-item"> <a href="https://twitter.com/theacademy"> Twitter</a></ol>
       </ul>
     </nav>
   </div>
@@ -24,7 +24,7 @@
         <div class="date-event">
 
         </div>
-         <h2>Bienvenido Cipher Academy Awards | 91th Academy Awards © </h2>
+         <h1>Bienvenido Cipher Academy Awards | 91th Academy Awards © </h2>
          <div class="slider">
             <ul>
             <li>
@@ -77,27 +77,25 @@
          </div>
       </div>
       <!-- PAGINA DE ELECCION : JURADO O USUARIO-->
-      <div id="second-page"
-      <div>
-         <button type="button" id="opcion-jurado" class="opcion-jurado">Soy jurado </button>
-         <button type="button" id="opcion-presentador" class="opcion-presentador">Soy presentador</button>
-         <button type="button" id="comeback-inicio" class="comeback-inicio">Inicio</button>
-      </div>
+      <div id="second-page" class="none">
+        <button type="button" id="opcion-jurado" class="opcion-jurado">Soy jurado </button>
+        <button type="button" id="opcion-presentador" class="opcion-presentador">Soy presentador</button>
+        <button type="button" id="comeback-inicio" class="comeback-inicio">Inicio</button>
       </div>
       <!-- JURADO-->
       <div id="jury-page">
-         <textarea id="texto-a-cifrar" rows="10" cols="80">Ingresa el nombre del candidato ganador</textarea>
+         <textarea id="texto-a-cifrar" rows="10" cols="80" placeholder="Ingresa el nombre del candidato ganador"></textarea>
          <input type="number" placeholder="ingresa offset para cifrar" id="offset-cifrado">
-         <button type="button"id="cifrar-jurado" class="cifrar-jurado">Cifrar</button>
-         <textarea id="texto-cifrado" rows="8" cols="80" readonly="readonly">Aquí obtendrás el nombre del candidato cifrado </textarea>
-         <button type="button" id="return-from-jury" class="return-from-jury"> Regresar </button>
+         <button type="button" id="cifrar-jurado" class="cifrar-jurado">Cifrar</button>
+         <textarea id="texto-cifrado" rows="8" cols="80" readonly="readonly" placeholder="Aquí obtendrás el nombre del candidato cifrado "></textarea>
+         <button type="button" id="return-from-jury" class="return-from-jury">Regresar</button>
       </div>
       <!-- PRESENTADOR-->
       <div id="presenter-page">
-         <textarea id="texto-a-descrifrar" rows="8" cols="80">Ingresa el nombre cifrado del candidato ganador</textarea>
-         <input type="number" placeholder="ingresa offset para descifrar" id="offset-cifrado">
+         <textarea id="texto-a-descrifrar" rows="8" cols="80" placeholder="Ingresa el nombre cifrado del candidato ganador"></textarea>
+         <input type="number" placeholder="ingresa offset para descifrar" id="offset-descifrado">
          <button type="button "id="descifrar-presentador" class="descifrar-presentador">Descrifrar</button>
-         <textarea id="texto-descifrado" rows="8" cols="80" readonly="readonly">Candidatx ganadxr Descifradx</textarea>
+         <textarea id="texto-descifrado" rows="8" cols="80" readonly="readonly" placeholder="Descubre el nombre de ganadxr"></textarea>
          <button type="button" id="return-from-presenter" class="return-from-presenter">Regresar</button>
       </div>
       <!-- PIE DE PÁGINA -->
