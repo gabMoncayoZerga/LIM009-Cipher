@@ -13,16 +13,21 @@
 
   0%{ margin-right:0;}
 
-  25%{ margin-left: -100%}
-  35%{ margin-left: -100%}
-  40%{ margin-left: -100%}
-  45%{ margin-left: -100%}
+  25%{ margin-left: -20%}
+  30%{ margin-left: -30%}
+  40%{margin-left:  -40%}
+  45%{ margin-left: -45%}
 
-  50%{ margin-left: -150%}
-  70%{ margin-left: -150%}
+  50%{ margin-left: -50%}
+  55%{ margin-left: -55%}
+  60{margin-left: -60%}
+  65{margin-left: -65%}
+  70%{margin-left:-70%}
 
-  75%{ margin-left: -300%}
-  100%{ margin-left:-300%}
+  75%{ margin-left: -75%}
+  80%{ margin-left: -80%}
+  90{margin-left: -90%}
+  100%{ margin-left:-100%}
 }
 
 .container{
