@@ -92,9 +92,7 @@ buttonComebackStartFromSecondPage.addEventListener("click",()=>{
   footer.style.display="block";
 });
 
-// OBTENIENDO EL VALOR DE TEXTTAREA desde TEXTO A CIFRAR a TEXTO CIFRADO//
-
-
+// OBTENIENDO EL VALOR DE TEXTAREA desde TEXTO A CIFRAR a TEXTO CIFRADO//
 function showTextoEncode() {
   let valueOfTextToEncode = textToEncode.value; //A
   encodedText.innerHTML = valueOfTextToEncode;
@@ -106,7 +104,7 @@ encodeButton.addEventListener("click", () => {
   showTextoEncode();
 })
 
-// OBTENIENDO EL VALOR DE TEXTTAREA desde TEXTO A DESCIFRAR a TEXTO DESCIFRADO//
+// OBTENIENDO EL VALOR DE TEXTAREA desde TEXTO A DESCIFRAR a TEXTO DESCIFRADO//
 
 function showTextToDecode() {
   let valueOfTextToDecode=textToDecode.value;
@@ -125,7 +123,7 @@ decodeButton.addEventListener("click",()=>{
 "ABC".charCodeAt(0) = 65  ACA LE PASO LA LETRA Y ME BRINDA EL NUMERO
 String.fromCharCode(65,66,67)  ACA LE PASO EL NUMERO Y ME BRINDA LA LETRA
 function CIFRADO() {
-let palabra a cifrar
+let palabra a cifrar = " algo";
 let palabraenCodigoASCII
 let offset = encodeOffset.value;
 for ( i = 0; i < palabra a Cifrar.length; i++) {

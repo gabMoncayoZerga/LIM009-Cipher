@@ -9,22 +9,25 @@
    <body>
     <!-- HEADER-->
 <header>
-  <div class="header">
-    <nav>
-      <ul>
-        <ol class="social-item"> <a href="https://www.facebook.com/TheAcademy/"> Facebook</a></ol>
-        <ol class="social-item"> <a href="https://www.instagram.com/theacademy/"> Instagram</a></ol>
-        <ol class="social-item"> <a href="https://twitter.com/theacademy"> Twitter</a></ol>
-      </ul>
-    </nav>
-  </div>
+  <nav>
+    <ul>
+      <li><a href="#"><span class=""><i class="icon "></i></span> Inicio </a></li>
+      <li><a href="#"><span class=""><i class="icon "></i></span> Categorias</a>
+        <ul>
+          <li>Jurado</li>
+          <li>Presentador</li>
+        </ul>
+      </li>
+      <li> <a href="#"> <span class=""><i class="icon "></i></span>Servicios</a></li>
+      <li> <a href="#"><span class=""><i class="icon "></i></span>Acerca de</a></li>
+      <li><a href="#"><span class=""><i class="icon "></i></span>Contacto</a></li>
+    </ul>
+  </nav>
 </header>
-      <!-- PAGINA DE BIENVENIDA-->
+    <!-- PAGINA DE BIENVENIDA-->
       <div id="welcome-page">
-        <div class="date-event">
-
-        </div>
-         <h1>Bienvenido Cipher Academy Awards | 91th Academy Awards © </h2>
+        <div class="date-event"></div>
+         <h2>Bienvenido Cipher Academy Awards | 91th Academy Awards © </h2>
          <div class="slider">
             <ul>
             <li>
@@ -84,7 +87,7 @@
       </div>
       <!-- JURADO-->
       <div id="jury-page">
-         <textarea id="texto-a-cifrar" rows="10" cols="80" placeholder="Ingresa el nombre del candidato ganador"></textarea>
+         <textarea id="texto-a-cifrar" rows="10" cols="80" placeholder="Ingresa el nombre del candidato ganador" required></textarea>
          <input type="number" placeholder="ingresa offset para cifrar" id="offset-cifrado">
          <button type="button" id="cifrar-jurado" class="cifrar-jurado">Cifrar</button>
          <textarea id="texto-cifrado" rows="8" cols="80" readonly="readonly" placeholder="Aquí obtendrás el nombre del candidato cifrado "></textarea>
@@ -92,16 +95,16 @@
       </div>
       <!-- PRESENTADOR-->
       <div id="presenter-page">
-         <textarea id="texto-a-descrifrar" rows="8" cols="80" placeholder="Ingresa el nombre cifrado del candidato ganador"></textarea>
+         <textarea id="texto-a-descrifrar" rows="8" cols="80" placeholder="Ingresa el nombre cifrado del candidato ganador" required></textarea>
          <input type="number" placeholder="ingresa offset para descifrar" id="offset-descifrado">
          <button type="button "id="descifrar-presentador" class="descifrar-presentador">Descrifrar</button>
          <textarea id="texto-descifrado" rows="8" cols="80" readonly="readonly" placeholder="Descubre el nombre de ganadxr"></textarea>
          <button type="button" id="return-from-presenter" class="return-from-presenter">Regresar</button>
       </div>
-      <!-- PIE DE PÁGINA -->
+    <!-- PIE DE PÁGINA -->
       <footer>
          <div id="footer">
-            © 2019 Ceaser Cipher Academy Awards
+            © 2019 LIM009-Cipher
          </div>
       </footer>
       <script src="index.js"></script>
