@@ -93,41 +93,55 @@ buttonComebackStartFromSecondPage.addEventListener("click",()=>{
 });
 
 // OBTENIENDO EL VALOR DE TEXTAREA desde TEXTO A CIFRAR a TEXTO CIFRADO//
-function showTextoEncode() {
+function showTextoEncode(string,offset) {
+  //parametros de la función --> string y offset//
   let valueOfTextToEncode = textToEncode.value; //A
-  encodedText.innerHTML = valueOfTextToEncode;
   //for (let i = 0; i <= valueOfTextToEncode.length; i++){
-//return encodedText =valueOfTextToEncode; //asigno a la caja dos el valor de la caja 1
+  /*
+//OBTENIENDO CODIGO ASCII/
+let getAsciiCode= string.charCodeAt(i);
+
+//APLICANDO LA FORMULA DE CIFRADO CESAR//
+(x-65 +n)%26+65 -->
+x= letra ascii
+n= offset
+const aplyingFormula= ((getAsciiCode-65+n)%26)+65);
+
+//CAMBIAR AL ALFABETO QUE ENTENDEMOS //
+
+const result=string.fromCharCode(aplyingFormula);
+console.log(result)
+*/
+  encodedText.innerHTML = valueOfTextToEncode;//return encodedText =valueOfTextToEncode; //asigno a la caja dos el valor de la caja 1
 }
 
 encodeButton.addEventListener("click", () => {
   showTextoEncode();
 })
+/*
+
+*/
 
 // OBTENIENDO EL VALOR DE TEXTAREA desde TEXTO A DESCIFRAR a TEXTO DESCIFRADO//
 
-function showTextToDecode() {
+function showTextToDecode(string,offset) {
   let valueOfTextToDecode=textToDecode.value;
+  //for (let i = 0; i <= valueOfTextToEncode.length; i++){
+//OBTENIENDO CODIGO ASCII/
+/*let getAsciiCode= string.charCodeAt(i);
+//APLICANDO LA FORMULA DE CIFRADO CESAR//
+(x-65 +n)%26+65
+x= letra ascii
+n= offset
+const aplyingFormula= ((getAsciiCode-65-n)%26)+65);
+//CAMBIAR AL ALFABETO QUE ENTENDEMOS //
+const result=string.fromCharCode(aplyingFormula);
+console.log(result)
+showTextoEncode(encode(7,"HOLA"))
+*/
   decodedText.innerHTML=valueOfTextToDecode;
 }
 
 decodeButton.addEventListener("click",()=>{
   showTextToDecode();
 })
-
-
-
-//PLANTEANDO FUNCION DE CIFRADO//
-/*(x-65 +n)%26+65
- charCodeAt()
-"ABC".charCodeAt(0) = 65  ACA LE PASO LA LETRA Y ME BRINDA EL NUMERO
-String.fromCharCode(65,66,67)  ACA LE PASO EL NUMERO Y ME BRINDA LA LETRA
-function CIFRADO() {
-let palabra a cifrar = " algo";
-let palabraenCodigoASCII
-let offset = encodeOffset.value;
-for ( i = 0; i < palabra a Cifrar.length; i++) {
-  (x-65 +n)%26+65
-((palabraenCodigoASCII-65) + offset)
-}
-}*/

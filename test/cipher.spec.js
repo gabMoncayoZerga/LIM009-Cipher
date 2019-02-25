@@ -1,3 +1,4 @@
+//CIFRAR//
 describe('cipher', () => {
 
   it('debería ser un objeto', () => {
@@ -13,6 +14,7 @@ describe('cipher', () => {
     it('debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33');
   });
 
+//DESCIFRAR//
   describe('cipher.decode', () => {
 
     it('debería ser una función', () => {
