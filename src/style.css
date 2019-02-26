@@ -73,7 +73,7 @@ background-image: -webkit-linear-gradient(top, #ccae62, #2079b0);
   text-shadow: 3px 2px 1px #9daef5;
   box-shadow: 6px 5px 24px #666666;
   color: #fafafa;
-  font-size: 20px;
+  font-size: 18px;
   padding: 19px;
   text-decoration: none;
 }
@@ -172,3 +172,7 @@ nav > ul > li > ul {
 	-o-transition: all .3s ease;
 	transition: all .3s ease;
 }
+
+#comeback-inicio{
+  display: block;
+  }
