@@ -24,19 +24,41 @@ Usa este alfabeto simple (solamente mayúsculas y sin ñ):
 
 #### Definición del producto
 
-En el README.md, cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso para definir el producto final a nivel de experiencia y de interfaz.
+los usuarios y cuál fue tu proceso para definir el producto final a nivel de experiencia y de interfaz.
+
+
 
 - Quiénes son los principales usuarios de producto.
+
+Los principales usuarios del producto son Jurados y Presentadores de un Premio, Award o Reconocimiento
+
+
 - Cuáles son los objetivos de estos usuarios en relación con tu producto.
+
+
+
+
+
 - Cómo crees que el producto que estás creando está resolviendo sus problemas.
+
+
 
 #### Interfaz de usuario (UI)
 
 La interfaz debe permitir al usuario:
+
 - Elegir un desplazamiento (_offset_) indicando cuántas posiciones queremos que el cifrado desplace cada caracter.
+
+
 - Insertar un mensaje (texto) que queremos cifrar.
+
+
 - Ver el resultado del mensaje cifrado.
+
+
 - Insertar un mensaje (texto) a descifrar.
+
+
 - Ver el resultado del mensaje descifrado.
 
 
@@ -48,8 +70,29 @@ La interfaz debe permitir al usuario:
 ![Diagrama de flujo](https://i.ibb.co/G2V3Txk/diagrama-de-flujo.png)
 
 
+
+2) Bosquejo a mano alzada
+
+
+3) Definición de la Temática
+
+
+
+4) Definición del Usuario
+
+
+
 ### Parte Opcional: "Hacker edition"
 
-* [ ] Cifra/descifra minúsculas
-* [ ] Cifra/descifra _otros_ caracteres (espacios, puntuación, `ñ`, `á`, ...)
-* [ ] Permite usar un `offset` negativo.
+Los caracteres del código ASCII a considerar para "Hacker edition" fueron los siguientes :
+
+* [✓] Cifra/descifra minúsculas
+
+   97
+* [✓] Cifra/descifra _otros_ caracteres (espacios, puntuación, `ñ`, `á`, ...)
+
+  -Vocales minúsculas con tilde
+  -ñ,Ñ
+  -Vocales minúsculas con dierecis
+  
+* [✓] Permite usar un `offset` negativo.

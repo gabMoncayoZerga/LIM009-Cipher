@@ -108,20 +108,15 @@ const aplyingFormula= ((getAsciiCode-65+n)%26)+65);
 //CAMBIAR AL ALFABETO QUE ENTENDEMOS //
 const result=string.fromCharCode(aplyingFormula);
 console.log(result)
-
 <--!PLANTEANDO FUNCION ENCODE-->
-
 function cipher(valueOfTextToEncode,offset) {
-
 let finalResultEncode= " ";
 for ( i = 0; i < valueOfTextToEncode.length; i++) {
 const getAsciiLetter= string.charCodeAt(i);
 const formula= ((getAsciiLetter-65+offset)%26)+65);
 }
-
 finalResultEncode=finalResultEncode+ valueOfTextToEncode.fromCharCode(formula);
 }
-
 */
   encodedText.innerHTML = valueOfTextToEncode;//return encodedText =valueOfTextToEncode; //asigno a la caja dos el valor de la caja 1
 }
