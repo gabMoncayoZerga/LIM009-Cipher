@@ -1,4 +1,5 @@
 //ALMACENAMOS EN VARIABLES LAS PANTALLAS ,TEXTAREA Y BOTONES DE LA WEB :D//
+
 //PRIMERA PAGINA//
 const startPage=document.getElementById("welcome-page");
 const startButton = document.getElementById("start");
@@ -50,7 +51,7 @@ electionButtonJury.addEventListener("click",()=>{
   encodeJuryPage.style.display="block";
   decodePresenterPage.style.display="none";
   footer.style.display="block";
-})
+});
 
 // PAGINA DE PRESENTADOR :añadimos al boton soy presentador el evento click y mostramos opciones para descifrar al ganador//
 electionButtonPresenter.addEventListener("click",()=>{
@@ -99,7 +100,8 @@ function showTextoEncode() {
 
 encodeButton.addEventListener("click", () => {
   showTextoEncode();
-})
+});
+
 
 
 // OBTENIENDO EL VALOR DE TEXTAREA desde TEXTO A DESCIFRAR a TEXTO DESCIFRADO//
@@ -110,4 +112,4 @@ function showTextToDecode() {
 
 decodeButton.addEventListener("click",()=>{
   showTextToDecode();
-})
+});
