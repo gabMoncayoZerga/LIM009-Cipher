@@ -13,16 +13,16 @@ const buttonComebackStartFromSecondPage=document.getElementById("comeback-inicio
 
 //PAGINA DE JURADO//
 const encodeJuryPage=document.getElementById("jury-page");
-const textToEncode=document.getElementById("texto-a-cifrar");
-const encodeOffset=document.getElementById("offset-cifrado");
+const textToEncode=document.getElementById("texto-a-cifrar").value;
+const encodeOffset=parseInt(document.getElementById("offset-cifrado").value);
 const encodeButton=document.getElementById("cifrar-jurado");
 const encodedText=document.getElementById("texto-cifrado");
 const buttonBackFromJury=document.getElementById("return-from-jury");
 
 //PAGINA DE PRESENTADOR//
 const decodePresenterPage=document.getElementById("presenter-page");
-const textToDecode=document.getElementById("texto-a-descrifrar");
-const decodeOffset=document.getElementById("offset-descifrado");
+const textToDecode=document.getElementById("texto-a-descrifrar").value;
+const decodeOffset=parseInt(document.getElementById("offset-descifrado").value);
 const decodeButton=document.getElementById("descifrar-presentador");
 const decodedText=document.getElementById("texto-descifrado");
 const buttonBackFromPresenter=document.getElementById("return-from-presenter");
@@ -95,7 +95,9 @@ buttonComebackStartFromSecondPage.addEventListener("click",()=>{
 
 // OBTENIENDO EL VALOR DE TEXTAREA desde TEXTO A CIFRAR a TEXTO CIFRADO//
 function showTextoEncode() {
-  encodedText.innerHTML = cipher.encode(textToEncode,encodeOffset)
+  // let newText = cipher.encode(encodeOffset, textToEncode);
+  // encodedText.value = newText;
+  encodedText.innerHTML=cipher.decode(encodeOffset, textToEncode);
 }
 
 encodeButton.addEventListener("click", () => {
@@ -107,7 +109,7 @@ encodeButton.addEventListener("click", () => {
 // OBTENIENDO EL VALOR DE TEXTAREA desde TEXTO A DESCIFRAR a TEXTO DESCIFRADO//
 
 function showTextToDecode() {
-  decodedText.innerHTML=cipher.decode(textToDecode,decodeOffset);
+  decodedText.innerHTML=cipher.decode(decodeOffset, textToDecode);
 }
 
 decodeButton.addEventListener("click",()=>{
