@@ -41,9 +41,7 @@ Usa este alfabeto simple (solamente mayúsculas y sin ñ):
 
 - Cómo crees que el producto que estás creando está resolviendo sus problemas.
 
-  ![Diagrama de flujo](https://i.ibb.co/G2V3Txk/diagrama-de-flujo.png)
-
-
+  
 #### Interfaz de usuario (UI)
 
 La interfaz debe permitir al usuario:

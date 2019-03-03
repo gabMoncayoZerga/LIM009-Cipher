@@ -11,7 +11,11 @@ describe('cipher', () => {
       assert.equal(typeof cipher.encode, 'function');
     });
 
-    it('debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33');
+    it('debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33', () => {
+        const result = window.cipher.encode('ABCDEFGHIJKLMNOPQRSTUVWXYZ',33);
+        assert.equal(result,"HIJKLMNOPQRSTUVWXYZABCDEFG");
+      });
+
   });
 
 //DESCIFRAR//
