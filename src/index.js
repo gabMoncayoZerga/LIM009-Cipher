@@ -1,6 +1,6 @@
 //ALMACENAMOS EN VARIABLES LAS PANTALLAS ,TEXTAREA Y BOTONES DE LA WEB :D//
 
-//PRIMERA PAGINA//
+//PAGINA DE INICIO//
 const startPage=document.getElementById("welcome-page");
 const startButton = document.getElementById("start");
 const footer=document.getElementById("footer");
@@ -13,16 +13,16 @@ const buttonComebackStartFromSecondPage=document.getElementById("comeback-inicio
 
 //PAGINA DE JURADO//
 const encodeJuryPage=document.getElementById("jury-page");
-const textToEncode=document.getElementById("texto-a-cifrar").value;
-const encodeOffset=parseInt(document.getElementById("offset-cifrado").value);
+const textToEncode=document.getElementById("texto-a-cifrar");
+const encodeOffset=document.getElementById("offset-cifrado");
 const encodeButton=document.getElementById("cifrar-jurado");
 const encodedText=document.getElementById("texto-cifrado");
 const buttonBackFromJury=document.getElementById("return-from-jury");
 
 //PAGINA DE PRESENTADOR//
 const decodePresenterPage=document.getElementById("presenter-page");
-const textToDecode=document.getElementById("texto-a-descrifrar").value;
-const decodeOffset=parseInt(document.getElementById("offset-descifrado").value);
+const textToDecode=document.getElementById("texto-a-descrifrar");
+const decodeOffset=document.getElementById("offset-descifrado");
 const decodeButton=document.getElementById("descifrar-presentador");
 const decodedText=document.getElementById("texto-descifrado");
 const buttonBackFromPresenter=document.getElementById("return-from-presenter");
@@ -93,23 +93,21 @@ buttonComebackStartFromSecondPage.addEventListener("click",()=>{
   footer.style.display="block";
 });
 
-// OBTENIENDO EL VALOR DE TEXTAREA desde TEXTO A CIFRAR a TEXTO CIFRADO//
+// OBTENIENDO EL VALOR DE TEXTAREA desde TEXTO A CIFRAR a TEXTO CIFRADO APLICANDO CIPHER.JS//
 function showTextoEncode() {
   // let newText = cipher.encode(encodeOffset, textToEncode);
   // encodedText.value = newText;
-  encodedText.innerHTML=cipher.decode(encodeOffset, textToEncode);
+  encodedText.innerHTML=cipher.encode(parseInt(encodeOffset.value), textToEncode.value);
 }
 
 encodeButton.addEventListener("click", () => {
   showTextoEncode();
 });
 
-
-
-// OBTENIENDO EL VALOR DE TEXTAREA desde TEXTO A DESCIFRAR a TEXTO DESCIFRADO//
+// OBTENIENDO EL VALOR DE TEXTAREA desde TEXTO A DESCIFRAR a TEXTO DESCIFRADO APLICANDO CIPHER.JS//
 
 function showTextToDecode() {
-  decodedText.innerHTML=cipher.decode(decodeOffset, textToDecode);
+  decodedText.innerHTML=cipher.decode(parseInt(decodeOffset.value), textToDecode.value);
 }
 
 decodeButton.addEventListener("click",()=>{

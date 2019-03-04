@@ -6,19 +6,13 @@
   20%{margin-left: 0;}
 
   0%{ margin-right:0;}
-
-  25%{ margin-left: -20%}
-
-
-  45%{margin-left: -40%}
-
-  55%{margin-left: -45%}
-
+  25%{ margin-left:-20%}
+  45%{margin-left:-40%}
+  55%{margin-left:-45%}
   70%{margin-left:-60%}
-  75%{margin-left: -65%}
-
-  80%{ margin-left: -80%}
-  90%{margin-left: -90%}
+  75%{margin-left:-65%}
+  80%{ margin-left:-80%}
+  90%{margin-left:-90%}
   100%{ margin-left:-100%}
 }
 
@@ -32,11 +26,23 @@
   top :20px;
 }
 
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+
+
 body{
 text-align: center;
 font-family: "Abril Fatface";
 background-color: #dfe4ea;
 margin: auto;
+min-height: 100%;
+}
+
+#encabezado-principal{
+  font-family: Helvetica,Arial,sans-serif;
 }
 
 #start,#intro{
@@ -46,9 +52,9 @@ text-align: center;
 }
 
 #footer{
-margin-top: none;
+margin-top: 12px;
 font-family: sans-serif;
-position: fixed;
+position: absolute;
 bottom: 0;
 width: 100%;
 height: 40px;
@@ -122,100 +128,103 @@ header {
 	  margin-top:10px;
     width: 100%;
     overflow: hidden;
-    height: 150px;
+    height: 120px;
     position: relative;
 }
 
 #comeback-inicio{
-  display: block;
-  }
+  margin: 20px;
+}
 
 
-  .grid {
-  	position: relative;
-  	margin: 0 auto;
-  	padding: 1em 0 4em;
-  	max-width: 1000px;
-  	list-style: none;
-  	text-align: center;
+.grid {
+	position: relative;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
   }
 
   /* Common style */
-  .grid figure {
-  	position: relative;
-  	float: left;
-  	overflow: hidden;
-  	margin: 10px 1%;
-  	min-width: 320px;
-  	max-width: 480px;
-  	max-height: 360px;
-  	width: 48%;
-  	background: #3085a3;
-  	text-align: center;
-  	cursor: pointer;
+.grid figure {
+	position: relative;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
   }
 
-  .grid figure img {
-  	position: relative;
-  	display: block;
-  	min-height: 100%;
-  	max-width: 100%;
-  	opacity: 0.8;
+.float-left {
+    float: left;
   }
 
-  .grid figure figcaption {
-  	padding: 2em;
-  	color: #fff;
-  	text-transform: uppercase;
-  	font-size: 1.25em;
-  	-webkit-backface-visibility: hidden;
-  	backface-visibility: hidden;
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
   }
 
-  .grid figure figcaption::before,
-  .grid figure figcaption::after {
-  	pointer-events: none;
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
   }
 
-  .grid figure figcaption,
-  .grid figure figcaption > a {
-  	position: absolute;
-  	top: 0;
-  	left: 0;
-  	width: 100%;
-  	height: 100%;
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+  }
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
   }
 
   /* Anchor will cover the whole item by default */
   /* For some effects it will show as a button */
   .grid figure figcaption > a {
-  	z-index: 1000;
-  	text-indent: 200%;
-  	white-space: nowrap;
-  	font-size: 0;
-  	opacity: 0;
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
   }
 
-  .grid figure h2 {
-  	word-spacing: -0.15em;
-  	font-weight: 300;
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
   }
 
-  .grid figure h2 span {
-  	font-weight: 800;
+.grid figure h2 span {
+	font-weight: 800;
   }
 
-  .grid figure h2,
-  .grid figure p {
-  	margin: 0;
+.grid figure h2,
+.grid figure p {
+	margin: 0;
   }
 
-  .grid figure p {
-  	letter-spacing: 1px;
-  	font-size: 68.5%;
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
   }
 
-  figure.effect-milo {
+figure.effect-milo {
 	background: #2e5d5a;
 }
 
@@ -263,4 +272,39 @@ figure.effect-milo:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+}
+
+/*##*/
+
+#second-page {
+  min-height: 680px;
+  width: 100%;
+}
+
+.page {
+  min-height: 600px;
+  width: 100%;
+}
+
+.row {
+  display: block;
+  margin: 7.5px;
+}
+
+#social-links{
+  margin-top: 15px;
+}
+
+.slink {
+  display: inline;
+  padding: 12px;
+}
+
+.slink a {
+  text-decoration: none;
+}
+
+.img-icon{
+  width: 40px;
+  height: 40px;
 }

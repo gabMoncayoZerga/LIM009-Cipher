@@ -1,5 +1,5 @@
 
-# CIPHER ACADEMY AWARDS CIPHER PROYECT © | 91th Edition
+# CIPHER ACADEMY AWARDS CIPHER PROYECT © | 91th Edition | v 2019
 
 Cifrar significa codificar. El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher) es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio César lo usaba para enviar órdenes secretas a sus generales en los campos de batalla.
 
@@ -10,8 +10,11 @@ El cifrado césar es una de las técnicas más simples para cifrar un mensaje. E
 Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
 
 - La letra A se cifra como D.
+
 - La palabra CASA se cifra como FDVD.
+
 - Alfabeto sin cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
 - Alfabeto cifrado: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 
 En la actualidad, todos los cifrados de sustitución simple se descifran con mucha facilidad y, aunque en la práctica no ofrecen mucha seguridad en la comunicación por sí mismos; el cifrado César sí puede formar parte de sistemas más complejos de codificación, como el cifrado Vigenère, e incluso tiene aplicación en el sistema ROT13.
@@ -26,103 +29,147 @@ Usa este alfabeto simple (solamente mayúsculas y sin ñ):
 
 #### Definición del producto
 
-
 - Quiénes son los principales usuarios de producto.
 
-  Los principales usuarios del producto son Jurados y Presentadores de un Premio, Award o Reconocimiento.
+  Los principales usuarios del producto son Jurados y Presentadores de un Premio, Award o Reconocimiento. Para este caso en particular el de los Premios de la Academia.
 
 
 - Cuáles son los objetivos de estos usuarios en relación con tu producto.
+  Los objetivos son los siguientes :
 
+  [✓] Brindar seguridad al compartir el mismo offset
+  [✓] Mantener la confidencialidad al momento de cifrar y descifrar mensajes
+  [✓] Brindar información rápida y útil sobre las nominadas a mejor película
 
 - Definición del producto final a nivel de experiencia y de interfaz
 
+  [✓]A nivel de experiencia :
 
+
+  [✓]A nivel de interfaz :
+   A nivel de interfaz traté de que la navegación en la web sea clara . Cuenta con un menú de navegación con redes sociales, botones que indican las acciones a realizar(seguir,continuar,regresar a inicio),cuenta con elementos de identificación como header que incluye redes sociales y elemento de contenido representado por el slideshow.
+   También tiene botones que direccionan a las paginas deseadas
 
 - Cómo crees que el producto que estás creando está resolviendo sus problemas.
 
-  
+
 #### Interfaz de usuario (UI)
 
-La interfaz debe permitir al usuario:
+  La interfaz debe permitir al usuario:
 
-[✓] Elegir un desplazamiento (_offset_) indicando cuántas posiciones queremos que el cifrado desplace cada caracter.
+  [✓] Elegir un desplazamiento (_offset_) indicando cuántas posiciones queremos que el cifrado desplace cada caracter.
 
+  [✓] Insertar un mensaje (texto) que queremos cifrar.
 
-[✓] Insertar un mensaje (texto) que queremos cifrar.
+  [✓] Ver el resultado del mensaje cifrado.
 
+  [✓] Insertar un mensaje (texto) a descifrar.
 
-[✓] Ver el resultado del mensaje cifrado.
-
-
-[✓] Insertar un mensaje (texto) a descifrar.
-
-
-[✓] Ver el resultado del mensaje descifrado.
+  [✓] Ver el resultado del mensaje descifrado.
 
 
 ### Proceso y Decisiones de diseño
 
-1) Definición de diagrama de Flujo
+#### 1) Definición de diagrama de Flujo
+
+    A continuación se presenta el diagrama de flujo del proyecto planteado
+
+  ![Diagrama de flujo](https://i.ibb.co/G2V3Txk/diagrama-de-flujo.png)
+
+#### 2) Bosquejo a mano alzada
+
+   Para este proyecto se definieron 4 pantallas, que serán descritas a continuación :
+
+   -Pantalla 1.- En la primera pantalla se da una breve introducción de la pagina web : información sobre los films nominados a mejor película, breve descripción de la funcionalidad de la página y conexión a redes sociales de La Academia.
+   Haciendo click en el boton "Empezar" ingresaremos a la segunda pantalla.
+   También consideré el caso en donde el Jurado no esté tan empapado de la temática de las películas nominadas y por ende actores, cada imagen del slideshow tiene anexado el link del trailer de cada película.
+   En el caso de el(la) presentador(a) si minutos antes de presentar el Award desea indagar más sobre las peliculas nominadas, tambien es posible :)
+
+   ![Pantalla1](https://i.ibb.co/HK5rQH4/7-C11-CD5-C-D940-40-C2-8424-F4-DFF135-A81-D.jpg)
+
+   -Pantalla 2.- Como ya se mencionó anteriormente , en este caso tenemos dos usuarios : Jurado y Presentador(a). En la segunda pantalla se da una descripción de la función que realiza cada rol, con una imagen interactiva para cada unx.
+   Cada rol tiene un botón , que al ser seleccionado, lleva a la pagina correspondiente.
+   Si es que se desea regresar por algún motivo a la pagina principal, tan solo presionando el botón Inicio es posible retornar.
 
 
-![Diagrama de flujo](https://i.ibb.co/G2V3Txk/diagrama-de-flujo.png)
+  ![Pantalla2](https://i.ibb.co/7StdPHS/AE92-D1-D2-0-F86-43-D7-B46-E-99-C46-C018-A4-B.jpg)
+
+   -Pantalla 3.- en esta pantalla se tienen las cajas de texto y botones correspondientes para el(la) Jurado. En esta página se cifrará el nombre de el(la) ganador(a) , deacuerdo a una clave(offset) definido.
+   Luego tanto texto cifrado como clave será compartida con el(la) presentador(a) del Premio de la Academia. Aquí se decidirá quien ganará la aclamada estatuilla.
+   Cuenta con un botón de retorno que lleva a la página de inicio.
+
+   ![Pantalla3](https://i.ibb.co/2F31xwF/AE92-D1-D2-0-F86-43-D7-B46-E-99-C46-C018-A4-B.jpg)
+
+   -Pantalla 4.-en esta pantalla se tienen las cajas de texto y botones correspondientes para el(la) Presentador(a). En esta página se descifrará el nombre de el(la) ganador(a) , deacuerdo a una clave(offset) compartida por el(la) Jurado.
+   De esta manera el(la) presentador(a) del Premio de la Academia revelará al mundo quien ganará la aclamada estatuilla.
+   Cuenta con un botón de retorno que lleva a la página de inicio.
+
+  ![Pantalla4](https://i.ibb.co/XkrQCcH/AA97-ADC2-8610-441-E-9-D04-08-D26-DD6-FADD.jpg)
+
+#### 3) Vista Final Bosquejo a mano alzada
+
+  ![VistaFinal](https://i.ibb.co/SdF6X9S/26951445-6-D3-F-4-D1-F-A9-E6-BA552-F49-F0-A3.jpg)
+
+#### 4) Maquetado inicial HTML y CSS
+
+  ![Web](https://i.ibb.co/B6YPL6B/C0-F8-E163-0859-44-F3-AE9-D-7190-B884-D3-FF.jpg)
+
+#### 5) Definición de la Temática
+
+  En 2017 llegó el momento más esperado de la gala de la 89ª Edición de los Premios de La Academia había llegado : la entrega del galardon a Mejor película, donde Fane Dunaway y Warren Beatty anunciaron que la ganadora era "La la land"
+
+  ![Warren](https://ichef.bbci.co.uk/news/624/cpsprodpb/182A9/production/_94858989_warrenfaye_getty.jpg)
+
+  Inmediatamente todo el elenco ganador de Lalaland subió rapidamente al escenario para recoger la ansiada estatuilla y agradecer a las personas que apoyaron a que el proyecto se lleve a cabo.
+
+  ![Lalaland](https://ichef.bbci.co.uk/news/624/cpsprodpb/106DF/production/_94859276_moonlight_ap.jpg)
+
+  Después del anuncio de la película ganadora , personal del equipo de la Academia se acercó a los ganadores indicando que había un error! Todos fueron directamente a verificar el sobre para ver si es que figuraba el nombre correcto , pero no fue así.
+
+  ![Confusion1](https://ichef.bbci.co.uk/news/624/cpsprodpb/9C31/production/_94858993_moonlight_reu.jpg)
+
+  La película que fue realmente ganadora fue Moonlight ante la sorpresa de todo el publico asistente al Teatro Kodak
+
+  ![Moonlight](https://ichef.bbci.co.uk/news/624/cpsprodpb/5DB1/production/_94858932_moonlight_reu6.jpg)
 
 
 
-2) Bosquejo a mano alzada
-
- Para este proyecto se definieron 4 pantallas, que serán descritas a continuación :
-
- -Pantalla 1.- En la primera pantalla se da una breve introducción de la pagina web : información sobre los films nominados a mejor película, breve descripción de la funcionalidad de la página y conexión a redes sociales de La Academia.
- Haciendo click en el boton "Empezar" ingresaremos a la segunda pantalla.
- También consideré el caso en donde el Jurado no esté tan empapado de la temática de las películas nominadas y por ende actores, cada imagen del slideshow tiene anexado el link del trailer de cada película.
- En el caso de el(la) presentador(a) si minutos antes de presentar el Award desea indagar más sobre las peliculas nominadas, tambien es posible :)
-
- ![Pantalla1](https://ibb.co/K5T9Hrh)
+  Para reducir el margen de error tenemos a Cipher Academy Awards | 91th Academy Awards ©, donde tanto presentador como jurado comparten tanto clave como el link de la aplicación para que no exista confusion en la información compartida.
 
 
- -Pantalla 2.- Como ya se mencionó anteriormente , en este caso tenemos dos usuarios : Jurado y Presentador(a). En la segunda pantalla se da una descripción de la función que realiza cada rol, con una imagen interactiva para cada unx.
- Cada rol tiene un botón , que al ser seleccionado, lleva a la pagina correspondiente.
- Si es que se desea regresar por algún motivo a la pagina principal, tan solo presionando el botón Inicio es posible retornar.
+#### 6) Definición del Usuario
 
 
-![Pantalla2](https://ibb.co/GFpGV97)
+### Recursos y temas relacionados
 
- -Pantalla 3.- en esta pantalla se tienen las cajas de texto y botones correspondientes para el(la) Jurado. En esta página se cifrará el nombre de el(la) ganador(a) , deacuerdo a una clave(offset) definido.
- Luego tanto texto cifrado como clave será compartida con el(la) presentador(a) del Premio de la Academia. Aquí se decidirá quien ganará la aclamada estatuilla.
- Cuenta con un botón de retorno que lleva a la página de inicio.
+Diseño de experiencia de usuario (User Experience Design):
 
- ![Pantalla3](https://ibb.co/HKTf60K)
+  -Ideación
+  -Prototipado (sketching)
+  -Testeo e Iteración
 
- -Pantalla 4.-en esta pantalla se tienen las cajas de texto y botones correspondientes para el(la) Presentador(a). En esta página se descifrará el nombre de el(la) ganador(a) , deacuerdo a una clave(offset) compartida por el(la) Jurado.
- De esta manera el(la) presentador(a) del Premio de la Academia revelará al mundo quien ganará la aclamada estatuilla.
- Cuenta con un botón de retorno que lleva a la página de inicio.
+Desarrollo Front-end:
 
-![Pantalla4](https://ibb.co/VWSHRgh)
+   -Valores
+  -Tipos
+  -Variables
+  -Control de flujo
+  -Tests unitarios
+  -Aprende más sobre charCodeAt()
+  -Aprende más sobre String.fromCharCode()
+  -Aprende más sobre ASCII
+  -Documentación de NPM
 
-3) Maquetado inicial HTML y CSS
+Herramientas:
 
-![Web](https://ibb.co/2Mp6qMd)
-
-4)Definición de la Temática
-
-  -
-
-
-
-5) Definición del Usuario
-
+  -GitHub y GitHub Pages
+  -Guía de Scrum: solamente para comenzar a entender cómo organizar tu trabajo.
 
 
 ### Parte Opcional: "Hacker edition"
 
-Los caracteres del código ASCII a considerar para "Hacker edition" fueron los siguientes :
-
 * [✓] Cifra/descifra minúsculas
 
-
 * [✓] Cifra/descifra _otros_ caracteres (espacios, puntuación, `ñ`, `á`, …)
-
 
 * [✓] Permite usar un `offset` negativo.

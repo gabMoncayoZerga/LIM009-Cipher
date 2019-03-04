@@ -42,7 +42,7 @@ decode: (decodeOffset, textToDecode) => {
   let offset= decodeOffset;
 
  let palabra = "";
-  for(let i=0; i < valueOfTextToDecode.length ; i++) {
+  for(let i=0; i <valueOfTextToDecode.length ; i++) {
     const getasciiCode= valueOfTextToDecode.charCodeAt(i);
    let aplyingFormula;
 

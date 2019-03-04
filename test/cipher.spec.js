@@ -20,6 +20,9 @@ describe('cipher.encode', () => {
   it('debería retornar "tgt" para "ana" con offest 33 negativo', () => {
     assert.equal(cipher.encode(-33, 'ana'), 'tgt');
   });
+  it('debería retornar "òçò" para "ÑñÑ" con offest 33 positivo', () => {
+    assert.equal(cipher.encode(33, 'ÑñÑ'), 'òçò');
+  });
 });
 
 describe('cipher.decode', () => {
@@ -37,5 +40,8 @@ describe('cipher.decode', () => {
   });
   it('debería retornar "ana" para "tgt" con offest 33 negativo', () => {
     assert.equal(cipher.decode(-33, 'tgt'), 'ana');
+  });
+  it('debería retornar "òçò" para "ÑñÑ" con offest 33 negativo', () => {
+    assert.equal(cipher.encode(33, 'ÑñÑ'), 'òçò');
   });
 });

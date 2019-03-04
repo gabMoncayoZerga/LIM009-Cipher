@@ -7,26 +7,26 @@
       <link rel="stylesheet" href="style.css">
    </head>
    <body>
-      <!-- HEADER-->
+  <!-- HEADER-->
       <header>
          <nav>
-            <ul>
-               <li><a href="https://www.facebook.com/TheAcademy/">Facebook </a></li>
-               <li><a href="https://twitter.com/theacademy">Twitter</a></li>
-               <li><a href="https://www.instagram.com/theacademy/">Instagram</a></li>
+            <ul id="social-links">
+               <li class="slink"><a href="https://www.facebook.com/TheAcademy/" target="_blank"><img class="img-icon" src="https://i.ibb.co/Q8ngNnn/fb2222.png"></a></li>
+               <li class="slink"><a href="https://twitter.com/theacademy" target="_blank"><img class="img-icon" src="https://i.ibb.co/tbmrdgM/twitteeer.png"></a></li>
+               <li class="slink"><a href="https://www.instagram.com/theacademy/" target="_blank"><img class="img-icon" src="https://i.ibb.co/QHpNVHR/instagram2222.png"></a></li>
             </ul>
          </nav>
       </header>
       <!-- PAGINA DE BIENVENIDA-->
-      <div id="welcome-page">
+      <div id="welcome-page" class="page">
          <div class="date-event"></div>
          <h1 id="encabezado-principal">Bienvenido Cipher Academy Awards | 91th Academy Awards © </h1>
-
-         <div class="slider">
+        <div class="slider">
             <ul>
                <li>
                   <a href="https://www.youtube.com/watch?v=aSGFt6w0wok ">
-                  <img src="http://www.cineymas.com.ar/wp-content/uploads/2019/01/Afiche-El-Vicepresidente.jpg" alt="vice">
+                  <img src="http://www.cineymas.com.ar/wp-content/uploads/2019/01/Afiche-El-Vicepresidente.jpg"
+                     alt="vice">
                   </a>
                </li>
                <li>
@@ -36,17 +36,23 @@
                </li>
                <li>
                   <a href="https://www.youtube.com/watch?v=mP0VHJYFOAU">
-                  <img src=" http://t1.gstatic.com/images?q=tbn:ANd9GcT-fRos8GzknaaeKu5pibLnWEn4aMVE5oFBxp7Pa5Zdy36N7DtI" alt="bohemian">
+                  <img
+                     src=" http://t1.gstatic.com/images?q=tbn:ANd9GcT-fRos8GzknaaeKu5pibLnWEn4aMVE5oFBxp7Pa5Zdy36N7DtI"
+                     alt="bohemian">
                   </a>
                </li>
                <li>
                   <a href=" https://www.youtube.com/watch?v=SYb-wkehT1g">
-                  <img src="https://static.metacritic.com/images/products/movies/1/218f6f055ae7d45b4b33235d4b76f22d-250h.jpg" alt="favourite">
+                  <img
+                     src="https://static.metacritic.com/images/products/movies/1/218f6f055ae7d45b4b33235d4b76f22d-250h.jpg"
+                     alt="favourite">
                   </a>
                </li>
                <li>
                   <a href="https://www.youtube.com/watch?v=9ZS5d9l8XL0">
-                  <img src="https://m.media-amazon.com/images/M/MV5BYzIzYmJlYTYtNGNiYy00N2EwLTk4ZjItMGYyZTJiOTVkM2RlXkEyXkFqcGdeQXVyODY1NDk1NjE@._V1_.jpg " alt="greenbook">
+                  <img
+                     src="https://m.media-amazon.com/images/M/MV5BYzIzYmJlYTYtNGNiYy00N2EwLTk4ZjItMGYyZTJiOTVkM2RlXkEyXkFqcGdeQXVyODY1NDk1NjE@._V1_.jpg "
+                     alt="greenbook">
                   </a>
                </li>
                <li>
@@ -61,56 +67,79 @@
                </li>
                <li>
                   <a href=" https://www.youtube.com/watch?v=xjDjIWPwcPU">
-                  <img src="https://cinepop.com.br/wp-content/uploads/2018/02/pantera-negra-poster-705x1024.jpeg" alt="blackpanter">
+                  <img src="https://cinepop.com.br/wp-content/uploads/2018/02/pantera-negra-poster-705x1024.jpeg"
+                     alt="blackpanter">
                   </a>
                </li>
             </ul>
-
+        </div>
+         <div class="row">
+            <button type="button" id="start" class="start"> Empezar</button>
          </div>
-         <button type="button" id="start" class="start"> Empezar</button>
       </div>
     <!-- PAGINA DE ELECCION : JURADO O USUARIO-->
       <div id="second-page" class="none">
          <div class="grid">
-            <figure class="effect-milo">
-               <img src="https://fortunedotcom.files.wordpress.com/2015/02/oscar-nominees-2015-2000px.jpg?w=840   " alt="jurado-box"/>
-               <figcaption>
+            <figure class="effect-milo float-left">
+               <img src="https://fortunedotcom.files.wordpress.com/2015/02/oscar-nominees-2015-2000px.jpg?w=840" alt="jurado-box">
+               <figcaption id="opcion-jurado-img" >
                   <h2> Jurado</h2>
-                  <p>Cifrarás el nombre de la persona ganadora de este </p>
+                  <p> Como Jurado definirás una clave y cifrarás el nombre de la persona ganadora de la Aclamada Estatuilla.Compartirás esta clave con el(la) presentador(a)</p>
                </figcaption>
             </figure>
             <figure class="effect-milo">
-               <img src="http://negrowhite.net/uploads/2018/03/faye-dunaway-warren-beatty-47c69605-7ecc-4c96-a6e9-94166bf70ff8.jpg" alt="presentador-box"/>
-               <figcaption>
+               <img src=" https://www.rollingstone.com/wp-content/uploads/2018/06/gettyimages-645746284-0265e208-d026-4186-8eae-91c0a0aeade3.jpg?crop=900:600&width=440 "
+                  alt="presentador-box">
+               <figcaption id="opcion-presentador-img">
                   <h2>Presentador(a)</h2>
-                  <p>Descifrarás el nombre del(la) ganador(a)</p>
+                  <p>Como Presentador(a) anunciarás y descifrarás el nombre del(la) ganador(a), deacuerdo a una clave brindada previamente por Jurado</p>
                </figcaption>
             </figure>
          </div>
-         <button type="button" id="opcion-jurado" class="opcion-jurado">Soy jurado </button>
-         <button type="button" id="opcion-presentador" class="opcion-presentador">Soy presentador</button>
-         <button type="button" id="comeback-inicio" class="comeback-inicio">Inicio</button>
+         <div class="row">
+            <button type="button" id="opcion-jurado" class="opcion-jurado">Soy jurado </button>
+            <button type="button" id="opcion-presentador" class="opcion-presentador">Soy presentador</button>
+         </div>
+         <div class="row">
+            <button type="button" id="comeback-inicio" class="comeback-inicio">Inicio</button>
+         </div>
       </div>
       <!-- JURADO-->
       <div id="jury-page">
-         <textarea id="texto-a-cifrar" rows="8" cols="70" placeholder="Ingresa el nombre del candidato ganador" required></textarea>
-         <input type="number" placeholder="ingresa offset para cifrar" id="offset-cifrado">
-         <button type="button" id="cifrar-jurado" class="cifrar-jurado">Cifrar</button>
-         <textarea id="texto-cifrado" rows="8" cols="70" placeholder="Aquí obtendrás el nombre del candidato cifrado "></textarea>
-         <button type="button" id="return-from-jury" class="return-from-jury">Regresar</button>
+         <div class="row">
+            <textarea id="texto-a-cifrar" rows="8" cols="70" placeholder="Ingresa el nombre del candidato ganador"
+               required></textarea>
+            <textarea id="texto-cifrado" rows="8" cols="70"
+               placeholder="Aquí obtendrás el nombre del candidato cifrado "></textarea>
+         </div>
+         <div class="row">
+            <label for="offset-cifrado">Desplazamiento: </label>
+            <input type="number" placeholder="ingresa offset para cifrar" id="offset-cifrado">
+         </div>
+         <div class="row">
+            <button type="button" id="cifrar-jurado" class="cifrar-jurado">Cifrar</button>
+            <button type="button" id="return-from-jury" class="return-from-jury">Regresar</button>
+         </div>
       </div>
       <!-- PRESENTADOR-->
       <div id="presenter-page">
-         <textarea id="texto-a-descrifrar" rows="8" cols="70" placeholder="Ingresa el nombre cifrado del candidato ganador" required></textarea>
-         <input type="number" placeholder="ingresa offset para descifrar" id="offset-descifrado">
-         <button type="button" id="descifrar-presentador" class="descifrar-presentador">Descrifrar </button>
-         <textarea id="texto-descifrado" rows="8" cols="70" placeholder="Descubre el nombre de ganadxr"></textarea>
-         <button type="button" id="return-from-presenter" class="return-from-presenter">Regresar</button>
+         <div class="row">
+            <textarea id="texto-a-descrifrar" rows="8" cols="70" placeholder="Ingresa el nombre cifrado del candidato ganador" required></textarea>
+            <textarea id="texto-descifrado" rows="8" cols="70" placeholder="Descubre el nombre de ganadxr"></textarea>
+         </div>
+         <div class="row">
+            <label for="offset-descifrado">Desplazamiento</label>
+            <input type="number" placeholder="ingresa offset para descifrar" id="offset-descifrado">
+         </div>
+         <div class="row">
+            <button type="button " id="descifrar-presentador" class="descifrar-presentador">Descrifrar</button>
+            <button type="button" id="return-from-presenter" class="return-from-presenter">Regresar</button>
+         </div>
       </div>
       <!-- PIE DE PÁGINA -->
       <footer>
          <div id="footer">
-            ©  2019   LIM009  -  Cipher
+            © 2019 LIM009-Cipher
          </div>
       </footer>
       <script src="index.js"></script>
