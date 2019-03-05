@@ -305,6 +305,15 @@ figure.effect-milo:hover p {
 }
 
 .img-icon{
-  width: 40px;
+  width: 45px;
   height: 40px;
+}
+
+.oscar-icon{
+  width: 43px;
+  height: 45px;
+}
+
+.textarea {
+  width: 40%;
 }
