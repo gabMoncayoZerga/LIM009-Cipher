@@ -21,6 +21,8 @@ En la actualidad, todos los cifrados de sustitución simple se descifran con muc
 
 Para este proyecto se aplicó este método en el marco de un evento de Premiación : Los premios Oscar :)
 
+![premio](http://as01.epimg.net/tikitakas/imagenes/2018/03/04/portada/1520158850_172116_1520158910_noticia_normal.jpg)
+
 ## Parte Obligatoria
 
 Usa este alfabeto simple (solamente mayúsculas y sin ñ):
@@ -39,25 +41,25 @@ Usa este alfabeto simple (solamente mayúsculas y sin ñ):
 
   [✓] Brindar seguridad al compartir el mismo offset
 
-
-  [✓] Mantener la confidencialidad al momento de cifrar y descifrar mensajes
-
+  [✓] Mantener la confidencialidad al momento de cifrar y descifrar los nombres de lxs ganadorxs
 
   [✓] Brindar información rápida y útil sobre las nominadas a mejor película
-
 
 
 - Definición del producto final a nivel de experiencia y de interfaz
 
   [✓]A nivel de experiencia :
+   A nivel de experiencia el propósito fue que la web sea interactiva , que el flujo por la página sea entendible y  que brinde información relevante en el momento de realizar las operaciones de cifrado y descifrado.
 
 
   [✓]A nivel de interfaz :
-   A nivel de interfaz traté de que la navegación en la web sea clara . Cuenta con un menú de navegación con redes sociales, botones que indican las acciones a realizar(seguir,continuar,regresar a inicio),cuenta con elementos de identificación como header que incluye redes sociales y elemento de contenido representado por el slideshow.
+   A nivel de interfaz traté de que la navegación en la web sea clara . Cuenta con un menú de navegación con redes sociales, botones que indican las acciones a realizar(seguir,continuar,regresar a inicio),cuenta con elementos de identificación como header que incluye redes sociales y elemento de contenido representado por el slideshow,cajas de texto,etc.
    También tiene botones que direccionan a las paginas deseadas
 
 - Cómo crees que el producto que estás creando está resolviendo sus problemas.
+  Esta web resuelve en primer lugar el problema de la confusion que se da cuando en el sobre existe información innecesaria, permite mayor grado de confidencialidad ya que solamente jurado y presentador compartirán la clave y evita confusiones en los resultados porque se define los roles e instrucciones.
 
+![WarrenSobre](https://fotografias.antena3.com/clipping/cmsimages02/2017/04/17/F3C37E38-C69F-4EA6-A4EB-ED03F15AFD41/58.jpg)
 
 #### Interfaz de usuario (UI)
 
@@ -110,7 +112,14 @@ Usa este alfabeto simple (solamente mayúsculas y sin ñ):
 
 #### 3) Decisión sobre Diseño
 
-
+      3.1) Bosquejo inicial en papel .- definir como sería el flujo de las pantallas y los elementos que habrían en ella. Planteado de una página para cifrar y otra para descifrar, ya que en una sola vista no sería entendible el planteamiento de ambos roles : jurado y presentador(a).
+      3.2) Maquetado en HTML y CSS.- en código definir las pantallas, botones, slideshow,header,etc.
+      3.3) Cifrado y descifrado.- en javascript empezar por cifrar una letra y una palabra en mayúsculas sin espacio
+           Definir en index.js la función para capturar el valor de las cajas de texto.
+      3.4) Cipher.js.- pasar la función cifrado y descrifrado al objeto Window y aplicar en index.js para          aplicar  la   función encode y decode al valor capturado por las cajas de texto.
+      3.5) Cipher.js.- añadir condicionales mofificando el rango de alcance para poder abarcar mas valores del      Tablero Ascii.
+      3.6) Cipher.js.- incluir condicionales para el caso del offset negativo y verificar como se estaban dando los casos.
+      3.7) Plantear test en Cipher.spec.js para alcanzar los porcentajes solicitado
 
 #### 4) Maquetado en HTML y CSS
 
@@ -132,17 +141,19 @@ Usa este alfabeto simple (solamente mayúsculas y sin ñ):
 
   ![Confusion1](https://ichef.bbci.co.uk/news/624/cpsprodpb/9C31/production/_94858993_moonlight_reu.jpg)
 
-  El error se suscitó ya que en el sobre del film 
-  La película que fue realmente ganadora fue Moonlight ante la sorpresa de todo el publico asistente al Teatro Kodak.
+  El error se suscitó ya que en el sobre del film habían  líneas de texto que no correspodían con el nombre de la pelicula ganadora y por ende el presentador anunciara a Lalaland.
+
+  La película que fue realmente ganadora fue Moonlight ante la sorpresa de todo el publico asistente al Teatro Kodak, el equipo de Lalaland se retiró del escenario y todo el equipo de Moonlight subió para brindar su discurso de agradecimiento.
 
   ![Moonlight](https://ichef.bbci.co.uk/news/624/cpsprodpb/5DB1/production/_94858932_moonlight_reu6.jpg)
 
-
-
-  Para reducir el margen de error tenemos a Cipher Academy Awards | 91th Academy Awards ©, donde tanto presentador como jurado comparten tanto clave como el link de la aplicación para que no exista confusion en la información compartida.
+  Para reducir el margen de error tenemos a Cipher Academy Awards | 91th Academy Awards ©, donde tanto presentador como jurado comparten tanto clave como el link de la aplicación ,la web tiene indicaciones claras ,cuenta con dos campos visibles para que no exista confusion al momento de compartir información :)
 
 
 #### 6) Definición del Usuario
+
+  Deacuerdo al contexto de los Premios Oscar y la funcionalidad de cifrar y descrifrar mensajes, se definió que el usuario sea la persona que realice esta acción.
+  Por su parte el Jurado debe mantener la confidencialidad de su resultado y el(la) presentador(a) deberá develar cual es el significado del mensaje cifrado previamente.
 
 
 ### Recursos y temas relacionados
@@ -175,7 +186,7 @@ Usa este alfabeto simple (solamente mayúsculas y sin ñ):
 
    -Documentación de NPM
 
-Herramientas:
+###Herramientas:
 
   -GitHub y GitHub Pages
   -Guía de Scrum: solamente para comenzar a entender cómo organizar tu trabajo.
@@ -183,8 +194,8 @@ Herramientas:
 
 ### Parte Opcional: "Hacker edition"
 
- [✓] Cifra/descifra minúsculas
+   [✓] Cifra/descifra minúsculas
 
- [✓] Cifra/descifra _otros_ caracteres (espacios, puntuación, `ñ`, `á`, …)
+   [✓] Cifra/descifra _otros_ caracteres (espacios, puntuación, `ñ`, `á`, …)
 
- [✓] Permite usar un `offset` negativo.
+   [✓] Permite usar un `offset` negativo.
